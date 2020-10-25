@@ -4,15 +4,14 @@ import {Container} from '@material-ui/core'
 import SnowCont from './Snow'
 
 function Home() {
-  const carousel = [
+  /*const carousel = [
     "software engineer",
     "student",
     "react.js fan",
     "computer scientist",
     "jayhawk",
     "seeking internship"
-  ];
-  console.log("test");
+  ];*/
   return (<div id="body">
     <Helmet>
       <title>Ethan Behrends | Home</title>

@@ -20,7 +20,7 @@ function Snow() {
   }
   return(
     <div class="snowCont" style={contStyle}>
-      <div class={"snow " + "snow-" + aniChoice} style={snowStyle}></div>
+      <div class={"snow snow-" + aniChoice} style={snowStyle}></div>
     </div>
   )
 }
