@@ -1,258 +1,108 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;700&family=PT+Serif:ital@0;1&display=swap");
-body {
+#body {
+  margin: 0;
+  padding: 2em;
+  background-color: #0c1326;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+#name {
+  font-size: 2em;
+  position: absolute;
+  left: 5vw;
+  top: 20vh;
+}
+
+#name h1, #name h2 {
   margin: 0;
 }
 
 h1 {
-  color: #203036;
+  color: #bfc8e0;
   font-family: "Manrope", sans-serif;
   font-size: 3em;
 }
 
-#landing {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  display: block;
-  background: radial-gradient(ellipse at bottom right, #b3f2ff, #67cbe0);
-  overflow: hidden;
-}
-
-#landing img {
-  position: absolute;
-}
-
-#foreground1, #foreground2, #foreground5 {
-  width: 100vw;
-  bottom: 0;
-  right: 0;
-  min-width: 900px;
-}
-
-#foreground2 {
-  transform: translateY(50%);
-}
-
-#foreground3 {
-  width: 50vw;
-  bottom: 0;
-  right: 0;
-  min-width: 450px;
-  transform: translateY(0%);
-}
-
-#foreground4 {
-  width: 33vw;
-  bottom: 40px;
-  right: 300px;
-  min-width: 200px;
-}
-
-#campanile {
-  width: 8vw;
-  min-width: 80px;
-  bottom: 50px;
-  right: 30px;
-}
-
-#title {
-  position: absolute;
-  top: 2em;
-  left: 2em;
+h2 {
+  color: #7f8eb8;
   font-family: "Manrope", sans-serif;
-  color: #203036;
-  animation: title 15s linear infinite;
-}
-
-#name {
-  font-weight: 700;
-  font-size: 5em;
-}
-
-#titleCarousel {
   font-weight: 200;
   font-size: 2em;
-  position: relative;
-  overflow: hidden;
-  height: 3.5em;
-  left: 0;
 }
 
-#primary, #secondary {
+.snowCont {
+  position: absolute;
+  animation: snowCont 5s infinite linear;
   top: 0;
-  position: absolute;
-}
-
-#primary {
-  opacity: 1;
   left: 0;
-}
-
-#secondary {
-  opacity: 0;
-  left: 300px;
-}
-
-#main {
-  min-height: 100vh;
   width: 100vw;
-  background-color: #d5ebf2;
-  padding: 2em;
-  box-sizing: border-box;
-}
-
-.container {
-  width: 90vw;
-  max-width: 700px;
-  margin: auto;
-}
-
-#runner {
-  width: 70px;
-  height: 70px;
-  position: relative;
-  animation: runner 0.6s infinite linear;
-}
-
-#head {
-  width: 17.5%;
-  position: absolute;
-  top: 0%;
-  right: 17%;
-}
-
-#body {
-  width: 23.2%;
-  position: absolute;
-  top: 18%;
-  right: 24%;
-}
-
-#arm {
-  width: 36.4%;
-  position: absolute;
-  top: 18.5%;
-  right: 0%;
-  transform-origin: 12% 17%;
-  transform: rotate(0deg);
-  animation: arm1 1.2s infinite ease;
-}
-
-#arm2 {
-  content: "";
-  width: 36.4%;
-  position: absolute;
-  top: 18.5%;
-  right: 0%;
-  transform-origin: 12% 17%;
-  transform: rotate(120deg);
-  animation: arm2 1.2s infinite ease;
-}
-
-#leg {
-  width: 25.3%;
-  position: absolute;
-  top: 46%;
-  right: 22%;
-  transform-origin: 17.5% 7.6%;
-  transform: rotate(0deg);
-  animation: leg1 1.2s infinite ease;
-}
-
-#leg2 {
-  width: 25.3%;
-  position: absolute;
-  top: 46%;
-  right: 22%;
-  transform-origin: 17.5% 7.6%;
-  transform: rotate(90deg);
-  animation: leg2 1.2s infinite ease;
-}
-
-#sun {
-  width: 200px;
-  height: 200px;
-  background-color: #ffd815;
-  border-radius: 50%;
-  filter: blur(25px);
-  position: absolute;
-  bottom: 0;
-  left: 50px;
-  transform-origin: 1400px 1500px;
-  transform: rotate(0deg);
-  animation: sun 300s infinite linear;
-}
-
-object {
   height: 100vh;
+  overflow: hidden;
 }
 
-@keyframes sun {
+.snow {
+  width: 10px;
+  height: 10px;
+  background-color: #bfc8e0;
+  filter: blur(5px);
+  position: absolute;
+}
+
+.snow-1 {
+  animation: snow-1 5s infinite cubic-bezier(0, 0.69, 0.45, 1.49);
+}
+
+.snow-2 {
+  animation: snow-2 5s infinite cubic-bezier(0.62, -0.31, 0.52, 0.65);
+}
+
+.snow-3 {
+  animation: snow-3 5s infinite ease-out;
+}
+
+.snow-4 {
+  animation: snow-4 5s infinite cubic-bezier(0.18, 0.59, 0.66, 0.63);
+}
+
+@keyframes snowCont {
   0% {
-    transform: rotate(-5deg);
+    top: 100%;
   }
   100% {
-    transform: rotate(80deg);
+    top: 0%;
   }
 }
-@keyframes title {
+@keyframes snow-1 {
   0% {
-    transform: translate3d(0, 0, 0);
-  }
-  20% {
-    transform: translate3d(20px, 10px, 0);
-  }
-  40% {
-    transform: translate3d(10px, 20px, 0);
-  }
-  60% {
-    transform: translate3d(-10px, 0, 0);
-  }
-  80% {
-    transform: translate3d(-20px, -10px, 0);
+    left: 0%;
   }
   100% {
-    transform: translate3d(0px, 0px, 0);
+    left: 100%;
   }
 }
-@keyframes arm1 {
-  0%, 100% {
-    transform: rotate(0deg);
+@keyframes snow-2 {
+  0% {
+    left: 0%;
   }
-  50% {
-    transform: rotate(120deg);
-  }
-}
-@keyframes arm2 {
-  0%, 100% {
-    transform: rotate(120deg);
-  }
-  50% {
-    transform: rotate(0deg);
+  100% {
+    left: 100%;
   }
 }
-@keyframes leg1 {
-  0%, 100% {
-    transform: rotate(0deg);
+@keyframes snow-3 {
+  0% {
+    left: 0%;
   }
-  50% {
-    transform: rotate(90deg);
-  }
-}
-@keyframes leg2 {
-  0%, 100% {
-    transform: rotate(90deg);
-  }
-  50% {
-    transform: rotate(0deg);
+  100% {
+    left: 100%;
   }
 }
-@keyframes runner {
-  0%, 100% {
-    transform: translateY(10px);
+@keyframes snow-4 {
+  0% {
+    left: 0%;
   }
-  50% {
-    transform: translateY(0px);
+  100% {
+    left: 100%;
   }
 }
 
