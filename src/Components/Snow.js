@@ -10,6 +10,7 @@ function Snow() {
   const contStyle = {
     left: (aniOffset + "vw"),
     width: (aniWidth +"vw"),
+    height: "20px",
     animationDelay: startPos,
     position: "absolute",
     top: "100%"
@@ -30,7 +31,7 @@ function SnowCont(props) {
   for (var i = 0; i < props.num; i++) {
     elements.push(<Snow key={i}></Snow>);
   }
-  return(elements);
+  return(<div class="snowOuter">{elements}</div>);
 }
 
 export default SnowCont

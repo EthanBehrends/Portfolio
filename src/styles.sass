@@ -16,6 +16,8 @@ $lighter: #bfc8e0
   position: absolute
   left: 5vw
   top: 20vh
+  animation: name 3s infinite cubic-bezier(0.45, 0.05, 0.55, 0.95)
+  transform: translate(0)
 
 #name h1, #name h2
   margin: 0
@@ -31,14 +33,17 @@ h2
   font-weight: 200
   font-size: 2em
 
-.snowCont
+.snowOuter
   position: absolute
-  animation: snowCont 5s infinite linear
   top: 0
   left: 0
   width: 100vw
   height: 100vh
   overflow: hidden
+
+.snowCont
+  position: absolute
+  animation: snowCont 5s infinite linear
 
 .snow
   width: 10px
@@ -48,16 +53,22 @@ h2
   position: absolute
 
 .snow-1
-  animation: snow-1 5s infinite cubic-bezier(0, 0.69, 0.45, 1.49)
+  animation: snow 5s infinite cubic-bezier(0, 0.69, 0.45, 1.49)
 
 .snow-2
-  animation: snow-2 5s infinite cubic-bezier(0.62,-0.31, 0.52, 0.65)
+  animation: snow 5s infinite cubic-bezier(0.62,-0.31, 0.52, 0.65)
 
 .snow-3
-  animation: snow-3 5s infinite ease-out
+  animation: snow 5s infinite ease-out
 
 .snow-4
-  animation: snow-4 5s infinite cubic-bezier(0.18, 0.59, 0.66, 0.63)
+  animation: snow 5s infinite cubic-bezier(0.18, 0.59, 0.66, 0.63)
+
+.socialBar
+  position: absolute
+  bottom: 20px
+  width: 80vw
+  left: 10vw
 
 @keyframes snowCont
   0%
@@ -65,26 +76,16 @@ h2
   100%
     top: 0%
 
-@keyframes snow-1
+@keyframes snow
   0%
     left: 0%
   100%
     left: 100%
 
-@keyframes snow-2
-  0%
-    left: 0%
-  100%
-    left: 100%
-
-@keyframes snow-3
-  0%
-    left: 0%
-  100%
-    left: 100%
-
-@keyframes snow-4
-  0%
-    left: 0%
-  100%
-    left: 100%
+@keyframes name
+  0%, 100%
+    opacity: 1
+    transform: translateY(0)
+  50%
+    opacity: .7
+    transform: translateY(15px)
