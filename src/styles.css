@@ -1,9 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;700&family=PT+Serif:ital@0;1&display=swap");
+#root {
+  min-height: 100vh;
+}
+
+html {
+  background-color: #111214;
+}
+
 #body {
   margin: 0;
-  padding: 2em;
-  background-color: #0c1326;
   box-sizing: border-box;
+  background-color: #111214;
   min-height: 100vh;
 }
 
@@ -20,6 +27,21 @@
   margin: 0;
 }
 
+#landing {
+  position: relative;
+  height: 100vh;
+  background-color: #0c1326;
+}
+
+#content {
+  padding: 2em;
+  width: 100vw;
+  max-width: 800px;
+  box-sizing: border-box;
+  margin: auto;
+  position: relative;
+}
+
 h1 {
   color: #bfc8e0;
   font-family: "Manrope", sans-serif;
@@ -31,6 +53,32 @@ h2 {
   font-family: "Manrope", sans-serif;
   font-weight: 200;
   font-size: 2em;
+}
+
+p {
+  color: #bfc8e0;
+  font-size: 1.5em;
+  font-family: "Manrope", sans-serif;
+}
+
+#tempResume {
+  text-decoration: none;
+  color: #7f8eb8;
+  padding: 0.5em;
+  display: block;
+  margin: 100px auto;
+  background-color: #0e1d45;
+  text-align: center;
+  font-size: 2em;
+  width: 300px;
+  box-sizing: border-box;
+  transition: 0.2s;
+  border-radius: 0.5em;
+}
+
+#tempResume:hover {
+  color: #bfc8e0;
+  background-color: #7f8eb8;
 }
 
 .snowOuter {

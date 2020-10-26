@@ -17,31 +17,42 @@ function Home() {
     <Helmet>
       <title>Ethan Behrends | Home</title>
     </Helmet>
-    <Container>
-      <div id="name">
-        <h1>
-          Ethan Behrends
-        </h1>
-        <h2>software engineer</h2>
-      </div>
-      <SnowCont num={10}/>
-
-      <Grid container="container" justify="center" style={{position: "absolute"}} alignItems="center" spacing={6}>
-        <Grid item="item">
-          <SocialLink url="https://github.com/EthanBehrends">
-            <GitHub style={{color: "#bfc8e0", fontSize: "50px"}}/>
-          </SocialLink>
-        </Grid>
-        <Grid item>
-          <SocialLink url="https://linkedin.com/in/Ethan-Behrends">
-            <LinkedIn style={{color: "#bfc8e0", fontSize: "50px"}}/>
-          </SocialLink>
-        </Grid>
-      </Grid>
-      <div id="content">
-        <h1>Who I am</h1>
-      </div>
-    </Container>
+    <div id="landing">
+      <Container>
+        <div id="name">
+          <h1>
+            Ethan Behrends
+          </h1>
+          <h2>software engineer</h2>
+        </div>
+        <SnowCont num={10}/>
+        <div class="socialBar">
+          <Grid container="container" justify="center" alignItems="center" spacing={6}>
+            <Grid item="item">
+              <SocialLink url="https://github.com/EthanBehrends">
+                <GitHub style={{
+                    color: "#bfc8e0",
+                    fontSize: "50px"
+                  }}/>
+              </SocialLink>
+            </Grid>
+            <Grid item="item">
+              <SocialLink url="https://linkedin.com/in/Ethan-Behrends">
+                <LinkedIn style={{
+                    color: "#bfc8e0",
+                    fontSize: "50px"
+                  }}/>
+              </SocialLink>
+            </Grid>
+          </Grid>
+        </div>
+      </Container>
+    </div>
+    <div id="content">
+        <h1>Work In Progess :)</h1>
+        <p>Thanks for taking the time to check out my portfolio website! I am currently in the process of a major design and content overhaul, so come back over the course of the next few weeks as I continue to make progress on those fronts. In the meantime, you can check out my resume!</p>
+        <a id="tempResume" href="resume" target='_blank' rel='noopener noreferrer'>Resume</a>
+  </div>
   </div>)
 }
 

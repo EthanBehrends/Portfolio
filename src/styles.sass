@@ -1,14 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;700&family=PT+Serif:ital@0;1&display=swap')
 
+$darker: #111214
 $dark: #0c1326
 $light: #7f8eb8
 $lighter: #bfc8e0
 
+#root
+  min-height: 100vh
+
+html
+  background-color: $darker
+
 #body
   margin: 0
-  padding: 2em
-  background-color: $dark
   box-sizing: border-box
+  background-color: $darker
   min-height: 100vh
 
 #name
@@ -22,6 +28,19 @@ $lighter: #bfc8e0
 #name h1, #name h2
   margin: 0
 
+#landing
+  position: relative
+  height: 100vh
+  background-color: $dark
+
+#content
+  padding: 2em
+  width: 100vw
+  max-width: 800px
+  box-sizing: border-box
+  margin: auto
+  position: relative
+
 h1
   color: $lighter
   font-family: 'Manrope', sans-serif
@@ -32,6 +51,29 @@ h2
   font-family: 'Manrope', sans-serif
   font-weight: 200
   font-size: 2em
+
+p
+  color: $lighter
+  font-size: 1.5em
+  font-family: 'Manrope', sans-serif
+
+#tempResume
+  text-decoration: none
+  color: $light
+  padding: .5em
+  display: block
+  margin: 100px auto
+  background-color: #0e1d45
+  text-align: center
+  font-size: 2em
+  width: 300px
+  box-sizing: border-box
+  transition: .2s
+  border-radius: .5em
+
+#tempResume:hover
+  color: $lighter
+  background-color: $light
 
 .snowOuter
   position: absolute
