@@ -1,30 +1,46 @@
 <script>
-	export let name;
+    import NameBubble from './NameBubble.svelte';
+    import Lines from './Lines.svelte';
+    import DarkMode from './DarkMode.svelte';
+    let darkMode = false;
+    let color="#E6EEF0";
+    function toggleDarkMode() {
+        console.log("test");
+        if(darkMode) {
+            darkMode = false;
+            color="#E6EEF0";
+        }
+        else {
+            darkMode =true;
+            color= "#1C2021";
+        }
+    }
+
 </script>
 
-<main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-</main>
+<DarkMode color={color} toggle={toggleDarkMode} />
+    <div id="splash" >
+
+        <NameBubble name={'Ethan Behrends'} title={'software engineer'} />
+        <Lines color={color}/>
+    </div>
+    <div id="content" style="--backgroundColor: {color}">
+
+    </div>
 
 <style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
+    #splash {
+        max-width: 100vw;
+        height: 100vh;
+        position: relative;
+        z-index:-1;
+    }
+    #content {
+        width: 100vw;
+        height: 100vh;
+        margin-top: 80px;
+        position: relative;
+        z-index: -2;
+        background-color: var(--backgroundColor);
+    }
 </style>
