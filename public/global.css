@@ -7,13 +7,25 @@ html, body {
 }
 
 body {
+	width: 100%;
 	margin: 0;
+	padding: 0.05px;
+	position: relative;
 	overflow-x: hidden;
 	box-sizing: border-box;
+	font-family: 'Manrope', sans-serif;
+  }
+  body::before {    
+	content: "";
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-image: url("https://images.unsplash.com/photo-1571541798923-18cb2a7ffabe?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1567&q=80");
 	background-size: cover;
 	background-position: top center;
-	font-family: 'Manrope', sans-serif;
-  }
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	z-index: -10;
+}
